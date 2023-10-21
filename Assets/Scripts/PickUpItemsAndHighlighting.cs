@@ -7,9 +7,7 @@ public class PickUpItemsAndHighlighting : MonoBehaviour
     {
         if (other.CompareTag("Potion"))
         {
-            GameObject potion = other.gameObject;
-            
-            potion.SetActive(false);
+            Destroy(other.gameObject);
 
             var highlighting = GetComponent<Outline>();
             highlighting.enabled = true;
